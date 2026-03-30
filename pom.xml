@@ -31,24 +31,38 @@
 		<spring-cloud.version>2025.1.1</spring-cloud.version>
 	</properties>
 	<dependencies>
+
+		<!-- SpringBoot dependencies -->
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
+
+		<!-- Spring Cloud  dependencies -->
+
+		<!-- To register with the config server -->
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
+
+		<!-- To act as a eureka server for service discovery -->
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
+
+		<!-- Testing dependencies -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -74,7 +88,7 @@
 				<version>3.5.1</version>
 				<configuration>
 					<to>
-						<image>sarmaria/${project.artifactId}:v2</image>
+						<image>sarmaria/${project.artifactId}:v3</image>
 					</to>
 				</configuration>
 			</plugin>
